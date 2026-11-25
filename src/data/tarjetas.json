@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "titulo": "Para estudiantes",
+    "texto": "Crea tu perfil y encuentra prácticas que encajan con lo que estudias.",
+    "icono": "/estudiantes.png",
+    "boton": "Buscar prácticas",
+    "enlace": "/practicas"
+  },
+  {
+    "id": 2,
+    "titulo": "Para empresas",
+    "texto": "Publica tus ofertas y descubre talento joven con ganas de aprender.",
+    "icono": "/empresa.png",
+    "boton": "Publicar oferta",
+    "enlace": "/publicar-oferta"
+  },
+  {
+    "id": 3,
+    "titulo": "Para centros educativos",
+    "texto": "Conecta con empresas y acompaña a tus alumnos en sus primeras prácticas.",
+    "icono": "/centro_educativo.png",
+    "boton": "Saber más",
+    "enlace": "/centros"
+  }
+]

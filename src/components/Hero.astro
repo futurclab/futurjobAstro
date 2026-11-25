@@ -1,0 +1,90 @@
+---
+---
+
+<section class="hero">
+  <div class="marco">
+    <div class="texto">
+      <h1>Tu futuro<br /><span>empieza aquí</span></h1>
+      <p>La red profesional para estudiantes y empresas que apuestan por el talento</p>
+    </div>
+    <img src="/fotoinicio.png" alt="Estudiantes celebrando" fetchpriority="high" />
+  </div>
+</section>
+
+<style>
+  /* Fondo del mismo azul claro que los bordes de la foto, para que no se note el corte */
+  .hero {
+    width: 100%;
+    background: #e9f1fd;
+  }
+
+  /* La foto no pasa de 1280px y queda centrada */
+  .marco {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    container-type: inline-size;
+  }
+
+  .marco img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .texto {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 90%;
+    text-align: center;
+  }
+
+  /* cqw = % del ancho de la foto, así el texto escala con ella */
+  h1 {
+    margin: 0;
+    font-size: 3.6cqw;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #2b3a9f;
+  }
+
+  h1 span {
+    color: #6b4df0;
+  }
+
+  p {
+    margin: 0.8cqw auto 0;
+    max-width: 30cqw;
+    font-size: 1.3cqw;
+    line-height: 1.35;
+    color: #4a6fa5;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      background: linear-gradient(180deg, #e9f1fd 0%, #ffffff 100%);
+    }
+
+    .texto {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+      width: 100%;
+      padding: 2rem 5% 0;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      max-width: 320px;
+      margin-top: 0.6rem;
+      font-size: 0.9rem;
+    }
+  }
+</style>

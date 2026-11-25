@@ -1,0 +1,92 @@
+---
+import datos from "../data/tarjetas.json";
+---
+
+<section class="tarjetas">
+  {datos.map((item) => (
+    <article class="tarjeta">
+      <img src={item.icono} alt="" />
+      <h2>{item.titulo}</h2>
+      <p>{item.texto}</p>
+      <a href={item.enlace}>{item.boton} →</a>
+    </article>
+  ))}
+</section>
+
+<style>
+  .tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(2rem, 7vw, 6rem);
+    width: 82%;
+    max-width: 1040px;
+    margin: -60px auto 5rem;
+    position: relative;
+    z-index: 3;
+  }
+
+  .tarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 400px;
+    padding: 2.5rem 1.75rem 1.75rem;
+    background: #ffffff;
+    border-radius: 22px;
+    box-shadow: 0 8px 24px rgba(31, 90, 166, 0.2);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(31, 90, 166, 0.28);
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    margin: 0 0 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1f5aa6;
+  }
+
+  p {
+    margin: 0 0 2rem;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: #1f5aa6;
+  }
+
+  a {
+    margin-top: auto;
+    width: 100%;
+    padding-top: 1.25rem;
+    border-top: 1px solid #e8f0fe;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #7c3aed;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .tarjetas {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      width: 90%;
+      margin: -1.5rem auto 3rem;
+    }
+
+    .tarjeta {
+      min-height: 0;
+    }
+  }
+</style>

@@ -1,0 +1,33 @@
+{
+  "copyright": "© 2026 Futurjob.com - Todos los derechos reservados",
+  "columnas": [
+    {
+      "titulo": "FuturJob",
+      "enlaces": [
+        { "texto": "Sobre nosotros", "enlace": "/sobre-nosotros" },
+        { "texto": "Contáctenos", "enlace": "/contacto" }
+      ]
+    },
+    {
+      "titulo": "Encuentra prácticas",
+      "enlaces": [
+        { "texto": "Prácticas", "enlace": "/practicas" },
+        { "texto": "Crear perfil", "enlace": "/registro" }
+      ]
+    },
+    {
+      "titulo": "Empresas",
+      "enlaces": [
+        { "texto": "Publicar prácticas", "enlace": "/publicar-oferta" }
+      ]
+    },
+    {
+      "titulo": "Legal",
+      "enlaces": [
+        { "texto": "Política de privacidad", "enlace": "/privacidad" },
+        { "texto": "Política de cookies", "enlace": "/cookies" },
+        { "texto": "Términos de uso", "enlace": "/terminos" }
+      ]
+    }
+  ]
+}

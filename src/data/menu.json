@@ -1,0 +1,5 @@
+[
+  { "id": 1, "texto": "Buscar prácticas", "etiqueta": "Prácticas", "icono": "/buscar_practicas.png", "enlace": "/practicas" },
+  { "id": 2, "texto": "Buscar empresa", "etiqueta": "Empresas", "icono": "/buscar_empresa.png", "enlace": "/empresas" },
+  { "id": 3, "texto": "Buscar persona", "etiqueta": "Personas", "icono": "/buscar_persona.png", "enlace": "/personas" }
+]

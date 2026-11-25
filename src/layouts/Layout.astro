@@ -1,23 +1,56 @@
+---
+interface Props {
+  titulo?: string;
+}
+const { titulo = "Futurjob · Prácticas con claridad" } = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<meta name="generator" content={Astro.generator} />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+	<title>{titulo}</title>
+</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
+<style is:global>
+	:root {
+		/* Paleta de marca Futurjob */
+		--azul: #2f4bf2;    /* Azul futuro · confianza */
+		--tinta: #101b3d;   /* Tinta · seriedad */
+		--lima: #c6f45e;    /* Lima · energía */
+		--niebla: #f6f8ff;  /* Niebla · fondo */
+		--blanco: #ffffff;  /* Blanco · espacios limpios */
+
+		/* Color de los bordes de la foto del inicio (para que no se note el corte) */
+		--borde-foto: #e9f1fd;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
 	html,
 	body {
 		margin: 0;
 		width: 100%;
-		height: 100%;
+		min-height: 100%;
+		background: var(--blanco);
+		color: var(--tinta);
+		font-family: "Montserrat", sans-serif;
+		font-weight: 500;
+	}
+
+	a {
+		text-decoration: none;
 	}
 </style>

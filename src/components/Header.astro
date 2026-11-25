@@ -1,0 +1,147 @@
+---
+import menu from "../data/menu.json";
+---
+
+<header>
+  <a class="logo" href="/public/futurjob_letras.png">Futur</a>
+
+  <nav class="iconos">
+    {menu.map((item) => (
+      <a class="icono" href={item.enlace} aria-label={item.texto}>
+        <img src={item.icono} alt={item.texto} />
+        <span class="etiqueta">{item.etiqueta}</span>
+      </a>
+    ))}
+  </nav>
+
+  <div class="botones">
+    <a class="login" href="/login">Log in</a>
+    <a class="registro" href="/registro">Sign Up</a>
+  </div>
+</header>
+
+<style>
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.9rem 5%;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(31, 90, 166, 0.08);
+  }
+  .iconos {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  /* Cada icono es la referencia para colocar su texto */
+  .icono {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icono img {
+    display: block;
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+  }
+
+  /* El texto: escondido por defecto, debajo del icono */
+  .etiqueta {
+    position: absolute;
+    top: 100%;
+    margin-top: -6px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #1f5aa6;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+  }
+
+  /* Al pasar el ratón (o con el teclado) aparece */
+  .icono:hover .etiqueta,
+  .icono:focus-visible .etiqueta {
+    opacity: 1;
+  }
+
+  .botones {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .botones a {
+    padding: 0.5rem 1.4rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  .login {
+    color: #1f5aa6;
+    border: 1.5px solid #1f5aa6;
+  }
+
+  .login:hover {
+    background: #e8f0fe;
+  }
+
+  .registro {
+    color: #ffffff;
+    background: #1f5aa6;
+    border: 1.5px solid #1f5aa6;
+  }
+
+  .registro:hover {
+    background: #174a8a;
+  }
+
+  @media (max-width: 768px) {
+    header {
+      flex-wrap: wrap;
+      padding: 0.7rem 4%;
+    }
+
+    .logo {
+      font-size: 1.25rem;
+    }
+
+    .botones a {
+      padding: 0.4rem 1rem;
+      font-size: 0.72rem;
+    }
+
+    /* Los iconos pasan a una fila propia debajo */
+    .iconos {
+      order: 3;
+      width: 100%;
+      justify-content: space-around;
+      gap: 0;
+      padding-top: 0.6rem;
+      border-top: 1px solid #e8f0fe;
+    }
+
+    .icono img {
+      width: 28px;
+      height: 28px;
+    }
+
+    /* En el móvil no hay ratón, así que el texto se ve siempre */
+    .etiqueta {
+      position: static;
+      opacity: 1;
+      margin-top: 2px;
+    }
+  }
+</style>
