@@ -3,7 +3,9 @@ import menu from "../data/menu.json";
 ---
 
 <header>
-  <a class="logo" href="/public/futurjob_letras.png">Futur</a>
+  <a class="logo" href="/">
+    <img src="/futurjob_letras.png" alt="FuturJob" />
+  </a>
 
   <nav class="iconos">
     {menu.map((item) => (
@@ -33,6 +35,17 @@ import menu from "../data/menu.json";
     background: #ffffff;
     box-shadow: 0 2px 10px rgba(31, 90, 166, 0.08);
   }
+  .logo {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .logo img {
+    display: block;
+    height: 25px;
+    width: auto;
+  }
+
   .iconos {
     display: flex;
     align-items: center;
@@ -113,8 +126,8 @@ import menu from "../data/menu.json";
       padding: 0.7rem 4%;
     }
 
-    .logo {
-      font-size: 1.25rem;
+    .logo img {
+      height: 20px;
     }
 
     .botones a {

@@ -1,11 +1,12 @@
 ---
 import datos from "../data/footer.json";
 ---
-
 <footer>
   <div class="contenido">
     <div class="marca">
-      <a class="logo" href="/">Futur<span>Job</span></a>
+      <a class="logo">
+        <img src="/public/futurjob_letras.png" alt="FuturJob" />
+      </a>
 
       <div class="redes">
         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -60,13 +61,16 @@ import datos from "../data/footer.json";
   }
 
   .logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #ffffff;
+    display: inline-block;
+    width: fit-content;
   }
 
-  .logo span {
-    color: #c9d6ff;
+  .logo img {
+    height: 32px;
+    width: auto;
+    display: block;
+    /* Descomenta la siguiente línea si el logo es oscuro y quieres volverlo blanco */
+    /* filter: brightness(0) invert(1); */
   }
 
   .redes {
